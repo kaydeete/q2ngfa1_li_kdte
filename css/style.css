@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+}
+
+.icon {
+    background: url(../images/sprite3.png) no-repeat;
+	width: 66px;
+	height: 66px;
+    display: inline-block;
+}
+
+#soundcloud {background-position: -587px -72px;}
+
+#fb {background-position: -439px -146px;}
+
+#pinterest {background-position: -141px -221px;}
+
+#ig {background-position: -290px -221px;}
+
+span a{
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    background-color: aquamarine;
+    justify-content: space-around;
+    padding-bottom: 1vw;
+    padding-top: 1vw;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-items: space-between;
+}
+
+.links a {
+    margin-left: 1vw;
+}
+
+.title {
+    padding: 1vw;
+    color: black;
+}
+
+@media screen and (max-width: 600px){
+    nav {
+        position: relative;
+        background-color: yellowgreen;
+    }
+
+    .title {
+        background-color: rgb(64, 85, 20);
+        padding: 1vw;
+        color: black;
+    }
+
+    .links {
+        display: none;
+        z-index: 1;
+        position: absolute;
+        background-color: rgb(189, 250, 57);
+        box-shadow: rgb(15, 21, 4);
+        min-width: 100vw;
+    }
+
+    .links a {
+        color: black;
+        padding-top: 1vh;
+        padding-bottom: 1vh;
+        display: block;
+    }
+    .links a:hover{background-color: blue; transition:.5s;}
+    nav:hover .links {display: block; transition: .5s;}
+    nav:hover .title {background-color: pink; transition: .5s;}
+}
